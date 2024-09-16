@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 18px;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background: #141e30;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3.5em;
+    letter-spacing: 1.5px;
+}
+
+header nav {
+    margin-top: 20px;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+header nav a:hover {
+    background-color: #e44d26;
+}
+
+.portfolio {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.portfolio-card {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+.portfolio-card:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 5px solid #e44d26;
+}
+
+.card-content {
+    padding: 30px;
+    text-align: left;
+}
+
+.card-content h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.card-content p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    font-size: 1.2em;
+}
+
+.card-content .btn {
+    display: inline-block;
+    background-color: #e44d26;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.card-content .btn:hover {
+    background-color: #d4411e;
+}
+
+.developer-info {
+    background-color: #141e30;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.developer-info h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.developer-info p {
+    font-size: 1.5em;
+    color: #ddd;
+    line-height: 1.8;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.1em;
+}
