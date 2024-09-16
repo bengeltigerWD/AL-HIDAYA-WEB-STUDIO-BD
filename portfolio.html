@@ -16,27 +16,34 @@
             background-color: #333;
             color: #fff;
             padding: 10px 0;
-        }
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
+            text-align: center;
+            position: relative;
         }
         header h1 {
             margin: 0;
             font-size: 24px;
         }
-        header nav {
+        .nav-buttons {
             display: flex;
-            gap: 15px;
+            justify-content: center;
+            margin: 10px 0;
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            gap: 10px;
         }
-        header nav a {
+        .nav-buttons button {
+            background-color: #007bff;
             color: #fff;
-            text-decoration: none;
+            border: none;
+            padding: 8px 16px;
+            font-size: 14px;
+            border-radius: 4px;
+            cursor: pointer;
         }
-        header nav a:hover {
-            text-decoration: underline;
+        .nav-buttons button:hover {
+            background-color: #0056b3;
         }
         main {
             padding: 20px;
@@ -110,21 +117,16 @@
 
         /* Responsive Styles */
         @media (max-width: 768px) {
-            header .container {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
             header h1 {
                 font-size: 20px;
             }
-            header nav {
-                margin-top: 10px;
+            .nav-buttons {
                 flex-direction: column;
-                gap: 10px;
+                gap: 5px;
             }
-            header nav a {
-                font-size: 14px;
+            .nav-buttons button {
+                font-size: 12px;
+                padding: 6px 12px;
             }
             .portfolio h2 {
                 font-size: 20px;
@@ -144,12 +146,11 @@
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Bengal Tiger Web Development Limited</h1>
-            <nav>
-                <a href="index.html" class="btn">Home</a>
-                <a href="javascript:history.back()" class="btn">Back</a>
-            </nav>
+        <h1>Bengal Tiger Web Development Limited</h1>
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+            <button onclick="window.location.href='index.html'">Home</button>
+            <button onclick="window.history.back()">Back</button>
         </div>
     </header>
     
