@@ -27,9 +27,12 @@
             margin: 0;
             font-size: 24px;
         }
+        header nav {
+            display: flex;
+            gap: 15px;
+        }
         header nav a {
             color: #fff;
-            margin-left: 20px;
             text-decoration: none;
         }
         header nav a:hover {
@@ -37,18 +40,17 @@
         }
         main {
             padding: 20px;
-            text-align: center;
         }
         .about-content {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             gap: 20px;
         }
         .about-text {
             max-width: 800px;
             margin: 0 auto;
+            text-align: center;
         }
         .about-text p {
             font-size: 16px;
@@ -66,6 +68,7 @@
         .team h3 {
             font-size: 24px;
             margin-bottom: 20px;
+            text-align: center;
         }
         .team-grid {
             display: flex;
@@ -92,6 +95,41 @@
             color: #fff;
             padding: 10px 0;
             text-align: center;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            header h1 {
+                font-size: 20px;
+            }
+            header nav {
+                margin-top: 10px;
+                flex-direction: column;
+                gap: 10px;
+            }
+            header nav a {
+                font-size: 14px;
+            }
+            .about-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .about-text {
+                font-size: 14px;
+                padding: 0 15px;
+            }
+            .team h3 {
+                font-size: 20px;
+            }
+            .team-member {
+                max-width: 100%;
+                padding: 15px;
+            }
         }
     </style>
 </head>
