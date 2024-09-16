@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bengal Tiger Web Development Limited - Portfolio</title>
-    <link rel="stylesheet" href="stylesp.css">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles1.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,7 +18,6 @@
             padding: 10px 0;
             text-align: center;
             position: relative;
-            overflow: hidden;
         }
         header h1 {
             margin: 0;
@@ -43,68 +42,29 @@
         .nav-buttons button:hover {
             background-color: #0056b3;
         }
-        main {
+        .portfolio-container {
             padding: 20px;
-        }
-        .portfolio {
             text-align: center;
         }
-        .portfolio h2 {
-            font-size: 24px;
+        .portfolio-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             margin-bottom: 20px;
         }
-        .portfolio-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .portfolio-card {
-            background: #fff;
+        .portfolio-item img {
+            width: 100%;
+            max-width: 400px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            overflow: hidden;
-            max-width: 300px;
-            text-align: center;
-            padding: 15px;
-        }
-        .portfolio-card img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-        .portfolio-card h3 {
-            font-size: 18px;
-            margin: 15px 0 10px;
-        }
-        .portfolio-card p {
-            font-size: 14px;
-            line-height: 1.6;
             margin-bottom: 10px;
         }
-        .portfolio-card .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 14px;
-            color: #fff;
-            background-color: #007bff;
-            text-decoration: none;
-            border-radius: 4px;
+        .portfolio-item h2 {
+            font-size: 22px;
+            margin: 10px 0;
         }
-        .portfolio-card .btn:hover {
-            background-color: #0056b3;
-        }
-        .developer-info {
-            margin-top: 40px;
-            text-align: center;
-        }
-        .developer-info h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        .developer-info p {
+        .portfolio-item p {
             font-size: 16px;
-            line-height: 1.6;
+            color: #666;
         }
         footer {
             background-color: #333;
@@ -115,34 +75,30 @@
 
         /* Responsive Styles */
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 20px;
-            }
             .nav-buttons {
-                flex-direction: column;
-                gap: 5px;
+                flex-direction: row;
+                gap: 10px;
+                justify-content: center;
             }
             .nav-buttons button {
                 font-size: 12px;
                 padding: 6px 12px;
             }
-            .portfolio h2 {
-                font-size: 20px;
+            .portfolio-item img {
+                width: 100%;
+                max-width: 300px;
             }
-            .portfolio-card {
-                max-width: 100%;
-                padding: 10px;
+            .portfolio-item h2 {
+                font-size: 18px;
             }
-            .portfolio-card h3 {
-                font-size: 16px;
-            }
-            .portfolio-card p {
-                font-size: 12px;
+            .portfolio-item p {
+                font-size: 14px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <h1>Bengal Tiger Web Development Limited</h1>
         <!-- Navigation Buttons -->
@@ -152,58 +108,27 @@
         </div>
     </header>
     
-    <main>
-        <section class="portfolio">
-            <div class="container">
-                <h2>Our Portfolio</h2>
-                <div class="portfolio-grid">
-                    <!-- Card for Fast Book BD -->
-                    <div class="portfolio-card">
-                        <img src="book.png" alt="Fast Book BD">
-                        <div class="card-content">
-                            <h3>Fast Book BD</h3>
-                            <p>Fast Book BD is an innovative e-book platform designed to offer a seamless reading experience. With a user-friendly interface and a vast collection of digital books, this website allows users to access their favorite e-books anytime, anywhere. It features an intuitive search functionality, personalized recommendations, and easy navigation to enhance the reading journey.</p>
-                            <a href="https://bengeltigerwd.github.io/Fast-Book-BD/" target="_blank" class="btn">Visit Website</a>
-                        </div>
-                    </div>
-
-                    <!-- Card for Helping Hand Jhenaidah -->
-                    <div class="portfolio-card">
-                        <img src="Helpinghand.png" alt="Helping Hand Jhenaidah">
-                        <div class="card-content">
-                            <h3>Helping Hand Jhenaidah</h3>
-                            <p>Helping Hand Jhenaidah is a donation website aimed at facilitating charitable contributions to various causes in Jhenaidah. It provides a platform for donors to contribute to local initiatives and support community development projects. The website features a user-friendly interface for making donations and tracking impact.</p>
-                            <a href="https://bengeltigerwd.github.io/Helping-Hand-Jhenaidah/" target="_blank" class="btn">Visit Website</a>
-                        </div>
-                    </div>
-
-                    <!-- Card for Team Info -->
-                    <div class="portfolio-card">
-                        <img src="group-system.png" alt="Team Info">
-                        <div class="card-content">
-                            <h3>Team Info</h3>
-                            <p>Team Info is a comprehensive group management system that allows users to create and manage groups effectively. It offers features such as member management, group communication, and administrative controls to ensure smooth operations within groups. The website is designed to enhance collaboration and organization among team members.</p>
-                            <a href="https://bengeltigerwd.github.io/Team-Info/" target="_blank" class="btn">Visit Website</a>
-                        </div>
-                    </div>
-
-                    <!-- Add more portfolio cards here -->
-                </div>
-            </div>
-        </section>
-        
-        <section class="developer-info">
-            <div class="container">
-                <h2>About the Developer</h2>
-                <p>Website developed by <strong>Ajmir Ahmed</strong>, a passionate web developer dedicated to creating innovative and user-friendly web solutions.</p>
-            </div>
-        </section>
-    </main>
-    
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Bengal Tiger Web Development Limited. All rights reserved.</p>
+    <!-- Portfolio Items -->
+    <div class="portfolio-container">
+        <h2>Our Portfolio</h2>
+        <!-- Portfolio Item 1 -->
+        <div class="portfolio-item">
+            <img src="your-image-1.jpg" alt="Project 1">
+            <h2>Project Title 1</h2>
+            <p>Description of the project goes here. Highlight key features and technologies used.</p>
         </div>
+        <!-- Portfolio Item 2 -->
+        <div class="portfolio-item">
+            <img src="your-image-2.jpg" alt="Project 2">
+            <h2>Project Title 2</h2>
+            <p>Description of the project goes here. Highlight key features and technologies used.</p>
+        </div>
+        <!-- Add more portfolio items as needed -->
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Bengal Tiger Web Development Limited. All rights reserved.</p>
     </footer>
 </body>
 </html>
