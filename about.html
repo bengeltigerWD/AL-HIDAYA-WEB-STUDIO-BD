@@ -5,6 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Bengal Tiger Web Development Limited</title>
     <link rel="stylesheet" href="styles0.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        header nav a {
+            color: #fff;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .about-text {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .about-text p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .team {
+            margin-top: 40px;
+        }
+        .team h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .team-member {
+            text-align: center;
+            max-width: 300px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .team-member img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -30,7 +119,7 @@
                         <p>Founded by passionate developers, Bengal Tiger Web Development Limited strives to make an impact by crafting creative and efficient websites that align with clients' goals.</p>
                     </div>
                     <div class="about-image">
-                        <img src="https://example.com/your-team-photo.jpg" alt="Our Team" class="team-photo">
+                        <img src="https://example.com/your-team-photo.jpg" alt="Our Team">
                     </div>
                 </div>
 
@@ -38,7 +127,7 @@
                     <h3>Meet the Team</h3>
                     <div class="team-grid">
                         <div class="team-member">
-                            <img src="https://example.com/ajmir-ahmed.jpg" alt="Ajmir Ahmed" class="team-photo">
+                            <img src="https://example.com/ajmir-ahmed.jpg" alt="Ajmir Ahmed">
                             <h4>Ajmir Ahmed</h4>
                             <p>Founder & Lead Developer</p>
                             <p>Ajmir is a creative and skilled developer with expertise in building modern web applications. His passion for technology and user-centered design drives the company's success.</p>
