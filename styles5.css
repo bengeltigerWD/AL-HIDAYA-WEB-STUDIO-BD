@@ -1,3 +1,4 @@
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -5,158 +6,165 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Roboto', sans-serif;
+    background-color: #1e1e2f;
+    color: #f7f9fc;
     line-height: 1.6;
     margin: 0;
 }
 
 .container {
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     padding: 20px;
 }
 
+/* Header */
 header {
-    background: #007BFF;
-    color: white;
-    padding: 10px 0;
+    background-color: #0d0d16;
+    padding: 20px 0;
+    position: relative;
     text-align: center;
+    color: #f7f9fc;
 }
 
 header h1 {
     font-size: 2.5em;
+    letter-spacing: 1.5px;
 }
 
 header nav {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 header nav a {
-    color: white;
+    color: #f7f9fc;
     margin: 0 15px;
     text-decoration: none;
     font-size: 1.2em;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease-in-out;
 }
 
 header nav a:hover {
-    text-decoration: underline;
+    background-color: #e44d26;
 }
 
+/* Hero Section */
 .hero {
-    background-color: #fff;
-    padding: 60px 0;
+    background-color: #0d0d16;
+    color: #f7f9fc;
+    padding: 80px 0;
     text-align: center;
-    background-image: url('hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
 }
 
 .hero h2 {
-    font-size: 2.5em;
+    font-size: 3em;
     margin-bottom: 20px;
-    color: #333;
 }
 
 .hero p {
     font-size: 1.2em;
-    margin-bottom: 20px;
-    color: #555;
+    margin-bottom: 30px;
 }
 
 .hero .btn {
-    background-color: #007BFF;
+    background-color: #e44d26;
     color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+    padding: 12px 30px;
+    border-radius: 50px;
     font-size: 1.2em;
-    cursor: pointer;
     text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
 .hero .btn:hover {
-    background-color: #0056b3;
+    background-color: #d4411e;
 }
 
+/* Services Section */
 .services {
-    padding: 40px 0;
+    background-color: #1e1e2f;
+    padding: 60px 0;
+    text-align: center;
 }
 
 .services h2 {
-    text-align: center;
+    font-size: 2.5em;
     margin-bottom: 40px;
-    font-size: 2em;
-    color: #333;
+    color: #f7f9fc;
 }
 
 .services-grid {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
 }
 
 .service-card {
-    background-color: #fff;
-    padding: 20px;
-    margin: 15px;
+    background-color: #2a2a40;
+    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 45%;
-    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
 }
 
 .service-card h3 {
-    color: #007BFF;
+    font-size: 1.8em;
+    color: #f7f9fc;
     margin-bottom: 15px;
 }
 
 .service-card p {
-    font-size: 1em;
-    color: #555;
+    color: #ccc;
+    font-size: 1.2em;
 }
 
+/* Call to Action Section */
 .cta {
-    background-color: #007BFF;
+    background-color: #e44d26;
     color: white;
+    padding: 60px 0;
     text-align: center;
-    padding: 40px 0;
 }
 
 .cta h2 {
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: 20px;
 }
 
 .cta p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+    font-size: 1.3em;
+    margin-bottom: 30px;
 }
 
 .cta .btn {
     background-color: white;
-    color: #007BFF;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+    color: #e44d26;
+    padding: 12px 30px;
+    border-radius: 50px;
     font-size: 1.2em;
-    cursor: pointer;
     text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
 .cta .btn:hover {
-    background-color: #f1f1f1;
+    background-color: #f0f0f0;
 }
 
+/* Footer */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #141424;
+    color: #f7f9fc;
     padding: 20px 0;
     text-align: center;
 }
 
 footer p {
-    margin: 0;
-    font-size: 1em;
+    font-size: 1.1em;
 }
