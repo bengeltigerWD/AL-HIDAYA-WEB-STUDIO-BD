@@ -5,6 +5,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bengal Tiger Web Development Limited - Portfolio</title>
     <link rel="stylesheet" href="stylesp.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        header nav {
+            display: flex;
+            gap: 15px;
+        }
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        .portfolio {
+            text-align: center;
+        }
+        .portfolio h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .portfolio-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .portfolio-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            max-width: 300px;
+            text-align: center;
+            padding: 15px;
+        }
+        .portfolio-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .portfolio-card h3 {
+            font-size: 18px;
+            margin: 15px 0 10px;
+        }
+        .portfolio-card p {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .portfolio-card .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 14px;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .portfolio-card .btn:hover {
+            background-color: #0056b3;
+        }
+        .developer-info {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .developer-info h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .developer-info p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            header h1 {
+                font-size: 20px;
+            }
+            header nav {
+                margin-top: 10px;
+                flex-direction: column;
+                gap: 10px;
+            }
+            header nav a {
+                font-size: 14px;
+            }
+            .portfolio h2 {
+                font-size: 20px;
+            }
+            .portfolio-card {
+                max-width: 100%;
+                padding: 10px;
+            }
+            .portfolio-card h3 {
+                font-size: 16px;
+            }
+            .portfolio-card p {
+                font-size: 12px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
