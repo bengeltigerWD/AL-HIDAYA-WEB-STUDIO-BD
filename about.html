@@ -22,46 +22,33 @@
             justify-content: space-between;
             align-items: center;
             padding: 0 20px;
-            flex-wrap: wrap;
         }
         header h1 {
             margin: 0;
             font-size: 24px;
         }
-        header nav {
-            display: flex;
-            gap: 15px;
-        }
         header nav a {
             color: #fff;
+            margin-left: 20px;
             text-decoration: none;
-            font-size: 14px;
         }
         header nav a:hover {
             text-decoration: underline;
         }
         main {
             padding: 20px;
-        }
-        .about {
             text-align: center;
-            margin-bottom: 40px;
-        }
-        .about h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
         }
         .about-content {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 20px;
             justify-content: center;
-            max-width: 1200px;
-            margin: 0 auto;
+            gap: 20px;
         }
         .about-text {
             max-width: 800px;
+            margin: 0 auto;
         }
         .about-text p {
             font-size: 16px;
@@ -91,22 +78,27 @@
             max-width: 300px;
             background: #fff;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .team-member:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(0,0,0,0.3);
         }
         .team-member img {
-            max-width: 100%;
+            max-width: 100px;
             height: auto;
             border-radius: 50%;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
         .team-member h4 {
+            margin: 10px 0 5px;
             font-size: 20px;
-            margin: 10px 0;
         }
         .team-member p {
             font-size: 14px;
-            line-height: 1.6;
+            line-height: 1.5;
         }
         footer {
             background-color: #333;
@@ -114,40 +106,14 @@
             padding: 10px 0;
             text-align: center;
         }
-
-        /* Responsive Styles */
         @media (max-width: 768px) {
-            header .container {
+            .team-grid {
                 flex-direction: column;
                 align-items: center;
-                text-align: center;
-            }
-            header h1 {
-                font-size: 20px;
-            }
-            header nav {
-                margin-top: 10px;
-                flex-direction: column;
-                gap: 10px;
-            }
-            header nav a {
-                font-size: 14px;
-            }
-            .about h2 {
-                font-size: 24px;
-            }
-            .about-text p {
-                font-size: 14px;
             }
             .team-member {
-                max-width: 100%;
-                padding: 15px;
-            }
-            .team-member h4 {
-                font-size: 18px;
-            }
-            .team-member p {
-                font-size: 12px;
+                max-width: 90%;
+                margin-bottom: 20px;
             }
         }
     </style>
