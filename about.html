@@ -107,7 +107,7 @@
             box-shadow: 0 0 25px rgba(0,0,0,0.3);
         }
         .team-member img {
-            max-width: 100px;
+            max-width: 120px; /* Increased size for better visibility on mobile */
             height: auto;
             border-radius: 50%;
             margin-bottom: 15px;
@@ -127,13 +127,19 @@
             text-align: center;
         }
         @media (max-width: 768px) {
-            .team-grid {
-                flex-direction: column;
-                align-items: center;
-            }
             .team-member {
                 max-width: 90%;
                 margin-bottom: 20px;
+                padding: 25px; /* Increased padding for better mobile view */
+            }
+            .team-member img {
+                max-width: 150px; /* Larger image size for mobile */
+            }
+            .team-member h4 {
+                font-size: 24px; /* Larger font size for names on mobile */
+            }
+            .team-member p {
+                font-size: 16px; /* Larger font size for descriptions on mobile */
             }
         }
     </style>
@@ -142,7 +148,6 @@
     <header>
         <div class="container">
             <h1>Bengal Tiger Web Development Limited</h1>
-           
         </div>
         <!-- Navigation Buttons -->
         <div class="nav-buttons">
