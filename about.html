@@ -28,14 +28,6 @@
             margin: 0;
             font-size: 24px;
         }
-        header nav a {
-            color: #fff;
-            margin-left: 20px;
-            text-decoration: none;
-        }
-        header nav a:hover {
-            text-decoration: underline;
-        }
         .nav-buttons {
             display: flex;
             justify-content: center;
@@ -95,13 +87,16 @@
         }
         .team-member {
             text-align: center;
-            max-width: 350px; /* Increased width */
-            height: auto; /* Allows the card to grow in height */
+            width: 350px; /* Fixed width for larger card */
             background: #fff;
-            padding: 40px; /* Increased padding for more height */
+            padding: 30px; /* Increased padding for more height */
             border-radius: 12px;
             box-shadow: 0 0 15px rgba(0,0,0,0.2);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 400px; /* Fixed height for card */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Ensure space is utilized evenly */
         }
         .team-member:hover {
             transform: scale(1.05);
@@ -129,18 +124,18 @@
         }
         @media (max-width: 768px) {
             .team-member {
-                max-width: 90%;
-                margin-bottom: 20px;
-                padding: 40px; /* Increased padding for better mobile view */
+                width: 90%;
+                height: auto; /* Adjust height for smaller screens */
+                padding: 20px;
             }
             .team-member img {
-                max-width: 150px; /* Larger image size for mobile */
+                max-width: 120px; /* Adjust image size for mobile */
             }
             .team-member h4 {
-                font-size: 28px; /* Larger font size for names on mobile */
+                font-size: 22px; /* Adjust font size for mobile */
             }
             .team-member p {
-                font-size: 18px; /* Larger font size for descriptions on mobile */
+                font-size: 14px; /* Adjust font size for mobile */
             }
         }
     </style>
