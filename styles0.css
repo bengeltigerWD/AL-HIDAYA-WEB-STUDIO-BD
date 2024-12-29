@@ -13,7 +13,7 @@ body {
 
 /* Header */
 header {
-    background-color: #333;
+    background-color: #000000; /* Dark Black */
     color: white;
     padding: 20px 0;
 }
@@ -98,7 +98,7 @@ nav a:hover {
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #000000; /* Dark Black */
     color: white;
     text-align: center;
     padding: 10px 0;
