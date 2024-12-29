@@ -6,59 +6,116 @@
     <title> AL-HIDAYA WEB STUDIO BANGLADESH </title>
     <link rel="stylesheet" href="styles5.css">
     <style>
-        /* Header and Footer Background Color */
-        header, footer {
+        /* Additional mobile-specific styles */
+        @media (max-width: 768px) {
+            header {
+                padding: 10px 0;
+            }
+
+            header .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            header img {
+                position: static;
+                width: 60px;
+                margin-bottom: 10px;
+            }
+
+            header h1 {
+                font-size: 20px;
+                margin: 0;
+            }
+
+            header nav {
+                margin-top: 10px;
+            }
+
+            header nav a {
+                display: block;
+                margin: 5px 0;
+                font-size: 14px;
+            }
+
+            .hero {
+                padding: 30px 15px;
+            }
+
+            .hero h2 {
+                font-size: 22px;
+            }
+
+            .hero p {
+                font-size: 14px;
+                margin-bottom: 15px;
+            }
+
+            .services {
+                padding: 30px 15px;
+            }
+
+            .services h2 {
+                font-size: 22px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .service-card {
+                padding: 15px;
+            }
+
+            .cta {
+                padding: 30px 15px;
+            }
+
+            .cta h2 {
+                font-size: 22px;
+            }
+
+            .cta p {
+                font-size: 14px;
+                margin-bottom: 15px;
+            }
+
+            .btn {
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+        }
+
+        /* Styling for the black background */
+        header, footer, .hero, .cta {
             background-color: black;
             color: white;
         }
 
-        header nav a {
-            color: white;
-            text-decoration: none;
-        }
-
-        header nav a:hover {
-            text-decoration: underline;
-        }
-
-        .btn {
-            background-color: black;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        .btn:hover {
-            background-color: #333;
-        }
-
-        .cta {
-            background-color: black;
-            color: white;
-            text-align: center;
-        }
-
-        .cta .btn {
-            margin-top: 15px;
+        .btn-white {
+            background-color: white;
+            color: black;
+            border: 1px solid black;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <img src="image_2024-12-29_204957428.png" alt="AL-HIDAYA WEB STUDIO BANGLADESH Logo" style="width: 80px; height: auto;">
-            <h1>AL-HIDAYA WEB STUDIO BANGLADESH</h1>
-            <p style="font-size: 14px; font-style: italic; color: #f7f3f2;">Empowering Innovation, Crafting Digital Excellence.</p>
-            <nav>
-                <a href="https://bengeltigerwd.github.io/ADVANCED-WEB-STORE/">Buy Site</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="about.html">About Us</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </div>
-    </header>
+    <div class="container">
+        <img src="image_2024-12-29_204957428.png" alt="AL-HIDAYA WEB STUDIO BANGLADESH Logo" style="width: 80px; height: auto;">
+        <h1>AL-HIDAYA WEB STUDIO BANGLADESH</h1>
+        <p style="font-size: 14px; font-style: italic; color: #f7f3f2;">Empowering Innovation, Crafting Digital Excellence.</p>
+        <nav>
+            <a href="https://bengeltigerwd.github.io/ADVANCED-WEB-STORE/">Buy Site</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
     
     <main>
         <!-- Hero Section -->
@@ -66,7 +123,7 @@
             <div class="container">
                 <h2>Welcome to AL-HIDAYA WEB STUDIO BANGLADESH </h2>
                 <p>Your gateway to innovative web solutions and digital excellence. We transform ideas into stunning websites that captivate and engage.</p>
-                <a href="portfolio.html" class="btn">See Our All WebSites</a>
+                <a href="portfolio.html" class="btn">See Our All WebSites </a>
             </div>
         </section>
         
@@ -86,12 +143,13 @@
                     <div class="service-card">
                         <h3>SEO Optimization</h3>
                         <p>Improve your search engine rankings and drive more traffic to your website with our expert SEO strategies.</p>
+p>
                     </div>
                     <div class="service-card">
                         <h3>E-Commerce Solutions</h3>
                         <p>Robust e-commerce platforms that make it easy to manage and grow your online store.</p>
                     </div>
-                </div>
+                
             </div>
         </section>
         
