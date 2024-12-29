@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background:#000000;
+    background: #000000; /* Dark Black */
     color: #fff;
     padding: 20px 0;
     position: relative;
@@ -72,7 +72,7 @@ main {
 
 .hero .btn {
     display: inline-block;
-    background: #333;
+    background: #000000; /* Dark Black */
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
@@ -117,7 +117,7 @@ main {
 }
 
 .cta {
-    background: #333;
+    background: #000000; /* Dark Black */
     color: #fff;
     padding: 40px 20px;
     text-align: center;
@@ -135,8 +135,8 @@ main {
 
 .cta .btn {
     display: inline-block;
-    background: #fff;
-    color: #333;
+    background: #000000; /* Dark Black */
+    color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -148,7 +148,7 @@ main {
 }
 
 footer {
-    background: #333;
+    background: #000000; /* Dark Black */
     color: #fff;
     padding: 20px;
     text-align: center;
