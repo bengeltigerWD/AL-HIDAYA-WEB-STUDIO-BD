@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> AL-HIDAYA WEB STUDIO BANGLADESH </title>
+    <title>AL-HIDAYA WEB STUDIO BANGLADESH</title>
     <link rel="stylesheet" href="styles5.css">
     <style>
         /* Additional mobile-specific styles */
@@ -94,36 +94,78 @@
             color: white;
         }
 
-        .btn-white {
+        .btn {
             background-color: white;
             color: black;
             border: 1px solid black;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+        }
+
+        /* Loading Page Styles */
+        #loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            z-index: 9999;
+        }
+
+        #loading img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        #loading h1 {
+            font-size: 24px;
+            font-family: 'Times New Roman', serif;
         }
     </style>
 </head>
 <body>
-    <header>
-    <div class="container">
-        <img src="image_2024-12-29_204957428.png" alt="AL-HIDAYA WEB STUDIO BANGLADESH Logo" style="width: 80px; height: auto;">
-        <h1>AL-HIDAYA WEB STUDIO BANGLADESH</h1>
-        <p style="font-size: 14px; font-style: italic; color: #f7f3f2;">Empowering Innovation, Crafting Digital Excellence.</p>
-        <nav>
-            <a href="https://bengeltigerwd.github.io/ADVANCED-WEB-STORE/">Buy Site</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+    <!-- Loading Page -->
+    <div id="loading">
+        <img src="image_2024-12-29_204957428.png" alt="Logo">
+        <h1>আসসালামু আলাইকুম</h1>
     </div>
-</header>
 
+    <header>
+        <div class="container">
+            <img src="image_2024-12-29_204957428.png" alt="AL-HIDAYA WEB STUDIO BANGLADESH Logo" style="width: 80px; height: auto;">
+            <h1>AL-HIDAYA WEB STUDIO BANGLADESH</h1>
+            <p style="font-size: 14px; font-style: italic; color: #f7f3f2;">Empowering Innovation, Crafting Digital Excellence.</p>
+            <nav>
+                <a href="https://bengeltigerwd.github.io/ADVANCED-WEB-STORE/">Buy Site</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
     
     <main>
         <!-- Hero Section -->
         <section class="hero">
             <div class="container">
-                <h2>Welcome to AL-HIDAYA WEB STUDIO BANGLADESH </h2>
+                <h2>Welcome to AL-HIDAYA WEB STUDIO BANGLADESH</h2>
                 <p>Your gateway to innovative web solutions and digital excellence. We transform ideas into stunning websites that captivate and engage.</p>
-                <a href="portfolio.html" class="btn">See Our All WebSites </a>
+                <a href="portfolio.html" class="btn">See Our All WebSites</a>
             </div>
         </section>
         
@@ -143,13 +185,12 @@
                     <div class="service-card">
                         <h3>SEO Optimization</h3>
                         <p>Improve your search engine rankings and drive more traffic to your website with our expert SEO strategies.</p>
-p>
                     </div>
                     <div class="service-card">
                         <h3>E-Commerce Solutions</h3>
                         <p>Robust e-commerce platforms that make it easy to manage and grow your online store.</p>
                     </div>
-                
+                </div>
             </div>
         </section>
         
@@ -165,25 +206,17 @@ p>
     
     <footer>
         <div class="container">
-            <p>&copy; 2024 AL-HIDAYA WEB STUDIO BANGLADESH . All rights reserved.</p>
+            <p>&copy; 2024 AL-HIDAYA WEB STUDIO BANGLADESH. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Default Statcounter code -->
-    <script type="text/javascript">
-        var sc_project=13037583; 
-        var sc_invisible=1; 
-        var sc_security="a4e26975"; 
+    <!-- Loading Script -->
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('loading').style.display = 'none';
+            }, 5000);
+        };
     </script>
-    <script type="text/javascript"
-    src="https://www.statcounter.com/counter/counter.js"
-    async></script>
-    <noscript><div class="statcounter"><a title="Web Analytics"
-    href="https://statcounter.com/" target="_blank"><img
-    class="statcounter"
-    src="https://c.statcounter.com/13037583/0/a4e26975/1/"
-    alt="Web Analytics"
-    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-    <!-- End of Statcounter Code -->
 </body>
 </html>
