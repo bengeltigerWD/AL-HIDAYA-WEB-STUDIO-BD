@@ -40,11 +40,6 @@
             text-transform: uppercase;
         }
 
-        header p {
-            font-size: 16px;
-            margin-top: 10px;
-        }
-
         header nav {
             margin-top: 15px;
         }
@@ -87,6 +82,8 @@
             border: 2px solid #ffcc00;
             border-radius: 5px;
             font-weight: bold;
+            display: inline-block;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         .hero .btn:hover {
@@ -154,6 +151,9 @@
             border: 2px solid #ffcc00;
             border-radius: 5px;
             font-weight: bold;
+            display: inline-block;
+            transition: background-color 0.3s, color 0.3s;
+            width: 100%; /* Ensures button fits on smaller screens */
         }
 
         .cta .btn:hover {
@@ -202,6 +202,12 @@
 
         /* Media Query for Mobile */
         @media (max-width: 768px) {
+            .cta .btn {
+                padding: 10px 15px;
+                font-size: 14px;
+                width: 100%; /* Button takes full width on small screens */
+            }
+
             header img {
                 width: 80px;
             }
@@ -210,22 +216,12 @@
                 font-size: 24px;
             }
 
-            header p {
-                font-size: 14px;
-            }
-
             .hero h2 {
                 font-size: 28px;
             }
 
             .hero p {
                 font-size: 16px;
-            }
-
-            .cta .btn {
-                width: 100%;
-                padding: 15px;
-                font-size: 18px;
             }
 
             .services-grid {
@@ -239,26 +235,15 @@
             .service-card h3 {
                 font-size: 18px;
             }
-        }
 
-        /* Mobile Adjustments */
-        @media (max-width: 480px) {
-            .hero h2 {
-                font-size: 24px;
-            }
-
-            .hero p {
-                font-size: 14px;
-            }
-
-            .cta h2 {
-                font-size: 24px;
-            }
-
-            footer p {
-                font-size: 12px;
+            /* Ensure Buy Now button doesn't become too large on small screens */
+            .hero .btn {
+                padding: 10px 15px;
+                font-size: 14px; /* Smaller font size */
+                width: auto;
             }
         }
+
     </style>
 </head>
 <body>
