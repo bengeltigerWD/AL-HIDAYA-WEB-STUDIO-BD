@@ -13,16 +13,11 @@
             padding: 0;
         }
         header {
-            background-color: #000; /* কালো রঙ */
+            background-color: #000;
             color: #fff;
             padding: 15px 0;
             position: relative;
-        }
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
+            text-align: center;
         }
         header h1 {
             margin: 0;
@@ -51,31 +46,6 @@
             padding: 20px;
             text-align: center;
         }
-        .loading {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        .spinner {
-            border: 8px solid #f4f4f4;
-            border-top: 8px solid #007bff;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        /* New font style for "Type something to start" */
         .about-text h3 {
             font-family: 'Courier New', monospace;
             font-weight: bold;
@@ -92,8 +62,13 @@
             color: #555;
             margin-bottom: 15px;
         }
+        .about-image {
+            text-align: center;
+            margin-top: 20px;
+        }
         .about-image img {
-            width: 100%;
+            width: 80%;
+            max-width: 300px;
             height: auto;
             border-radius: 8px;
         }
@@ -112,11 +87,16 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .team-member:hover {
+            transform: scale(1.05);
         }
 
         .team-member img {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             margin-bottom: 15px;
         }
@@ -144,14 +124,18 @@
             .about-text h3 {
                 font-size: 24px;
             }
+            .about-text p {
+                font-size: 14px;
+            }
             .team-grid {
                 grid-template-columns: 1fr;
             }
             .team-member {
                 padding: 10px;
             }
-            .about-text p {
-                font-size: 14px;
+            .team-member img {
+                width: 70px;
+                height: 70px;
             }
         }
 
@@ -174,10 +158,10 @@
 </head>
 <body>
     <header>
-        <div class="container">
+        <div>
             <h1>Bengal Tiger Web Development Limited</h1>
         </div>
-        <!-- ন্যাভিগেশন বোতাম -->
+        <!-- Navigation Buttons -->
         <div class="nav-buttons">
             <button onclick="window.location.href='index.html'">Home</button>
             <button onclick="window.history.back()">Back</button>
@@ -186,7 +170,7 @@
 
     <main>
         <section class="about">
-            <div class="container">
+            <div>
                 <h2>About Us</h2>
                 <div class="about-content">
                     <div class="about-text">
@@ -215,7 +199,7 @@
     </main>
 
     <footer>
-        <div class="container">
+        <div>
             <p>&copy; 2024 AL-HIDAYA WEB STUDIO BANGLADESH. All rights reserved.</p>
         </div>
     </footer>
