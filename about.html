@@ -75,9 +75,9 @@
 
         /* Team member card styling */
         .team-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
             margin-top: 30px;
         }
 
@@ -88,6 +88,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
             transition: transform 0.3s;
+            width: 250px;
         }
 
         .team-member:hover {
@@ -128,10 +129,12 @@
                 font-size: 12px;
             }
             .team-grid {
-                grid-template-columns: 1fr;
+                flex-direction: column;
+                align-items: center;
             }
             .team-member {
                 padding: 10px;
+                width: 90%;
             }
             .team-member img {
                 width: 60px;
