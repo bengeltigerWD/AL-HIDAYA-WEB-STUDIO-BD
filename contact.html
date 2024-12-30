@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="styles1.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Times New Roman', Times, serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #333;
+            background-color: #000; /* কালো রঙ */
             color: #fff;
             padding: 10px 0;
             text-align: center;
@@ -41,6 +41,13 @@
         }
         .nav-buttons button:hover {
             background-color: #0056b3;
+        }
+        footer {
+            background-color: #000; /* কালো রঙ */
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif; /* ফন্ট স্টাইল */
         }
         .contact-container {
             padding: 20px;
@@ -123,12 +130,6 @@
             font-size: 16px;
             margin: 5px 0;
         }
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
 
         /* Responsive Styles */
         @media (max-width: 768px) {
@@ -155,6 +156,16 @@
     </style>
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <h1>AL-HIDAYA WEB STUDIO BANGLADESH</h1>
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+            <button onclick="window.location.href='index.html'">Home</button>
+            <button onclick="window.history.back()">Back</button>
+        </div>
+    </header>
+  <body>
     <!-- Header -->
     <header>
         <h1>AL-HIDAYA WEB STUDIO BANGLADESH</h1>
@@ -226,22 +237,6 @@
             window.history.back();
         }
     </script>
-    <!-- Statcounter code -->
-    <script type="text/javascript">
-        var sc_project=13037502; 
-        var sc_invisible=1; 
-        var sc_security="dd3f9559"; 
-    </script>
-    <script type="text/javascript"
-    src="https://www.statcounter.com/counter/counter.js"
-    async></script>
-    <noscript><div class="statcounter"><a title="Web Analytics"
-    href="https://statcounter.com/" target="_blank"><img
-    class="statcounter"
-    src="https://c.statcounter.com/13037502/0/dd3f9559/1/"
-    alt="Web Analytics"
-    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-    
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 AL-HIDAYA WEB STUDIO BANGLADESH. All rights reserved.</p>
