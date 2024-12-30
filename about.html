@@ -13,7 +13,7 @@
             padding: 0;
         }
         header {
-            background-color: #000; /* Dark black color */
+            background-color: #000; /* কালো রঙ */
             color: #fff;
             padding: 10px 0;
             position: relative;
@@ -51,92 +51,27 @@
             padding: 20px;
             text-align: center;
         }
-        .about-content {
+        .loading {
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            justify-content: center;
-            gap: 20px;
+            height: 100vh;
+            background-color: #f4f4f4;
         }
-        .about-text {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .about-text p {
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        .about-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-        .team {
-            margin-top: 40px;
-        }
-        .team h3 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-        .team-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .team-member {
-            text-align: center;
-            width: 350px; /* Fixed width for larger card */
-            background: #fff;
-            padding: 30px; /* Increased padding for more height */
-            border-radius: 12px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: auto; /* Adjust height based on content */
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Center content horizontally */
-            justify-content: center; /* Center content vertically */
-        }
-        .team-member:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 25px rgba(0,0,0,0.3);
-        }
-        .team-member img {
-            max-width: 150px; /* Larger image size */
-            height: auto;
+        .spinner {
+            border: 8px solid #f4f4f4;
+            border-top: 8px solid #007bff;
             border-radius: 50%;
-            margin-bottom: 15px;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
         }
-        .team-member h4 {
-            margin: 10px 0 5px;
-            font-size: 24px; /* Larger font size */
-        }
-        .team-member p {
-            font-size: 16px; /* Larger font size */
-            line-height: 1.5;
-        }
-        footer {
-            background-color: #000; /* Dark black color */
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        @media (max-width: 768px) {
-            .team-member {
-                width: 90%;
-                height: auto; /* Adjust height for smaller screens */
-                padding: 20px;
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
             }
-            .team-member img {
-                max-width: 120px; /* Adjust image size for mobile */
-            }
-            .team-member h4 {
-                font-size: 22px; /* Adjust font size for mobile */
-            }
-            .team-member p {
-                font-size: 14px; /* Adjust font size for mobile */
+            100% {
+                transform: rotate(360deg);
             }
         }
     </style>
@@ -146,13 +81,13 @@
         <div class="container">
             <h1>Bengal Tiger Web Development Limited</h1>
         </div>
-        <!-- Navigation Buttons -->
+        <!-- ন্যাভিগেশন বোতাম -->
         <div class="nav-buttons">
             <button onclick="window.location.href='index.html'">Home</button>
             <button onclick="window.history.back()">Back</button>
         </div>
     </header>
-    
+
     <main>
         <section class="about">
             <div class="container">
@@ -177,13 +112,12 @@
                             <p>Founder & Lead Developer</p>
                             <p>Ajmir is a creative and skilled developer with expertise in building modern web applications. His passion for technology and user-centered design drives the company's success.</p>
                         </div>
-                        <!-- Add more team members here -->
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    
+
     <footer>
         <div class="container">
             <p>&copy; 2024 AL-HIDAYA WEB STUDIO BANGLADESH. All rights reserved.</p>
