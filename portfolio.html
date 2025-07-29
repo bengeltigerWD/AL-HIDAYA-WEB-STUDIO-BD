@@ -4,25 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AL-HIDAYA WEB STUDIO BANGLADESH- Portfolio</title>
-    <link rel="stylesheet" href="stylesp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: "Times New Roman", serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            color: #333;
         }
         header {
-            background-color: #000; /* কালো রঙ */
+            background-color: #000;
             color: #fff;
-            padding: 10px 0;
+            padding: 15px 0;
             position: relative;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         header .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         header h1 {
             margin: 0;
@@ -30,7 +34,7 @@
         }
         .nav-buttons {
             display: flex;
-            gap: 10px;
+            gap: 15px;
         }
         .nav-buttons a {
             padding: 8px 16px;
@@ -39,16 +43,118 @@
             background-color: #007bff;
             text-decoration: none;
             border-radius: 4px;
-            transition: background-color 0.3s;
+            transition: all 0.3s;
         }
         .nav-buttons a:hover {
             background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            margin: 30px 0;
+            color: #222;
+            font-size: 2.2rem;
+            position: relative;
+        }
+        h2::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #007bff;
+            margin: 10px auto;
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .portfolio-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .portfolio-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card-content h3 {
+            margin-top: 0;
+            color: #007bff;
+            font-size: 1.4rem;
+        }
+        .card-content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s;
+            font-size: 14px;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        .developer-info {
+            background: #fff;
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .developer-info h2 {
+            margin-top: 0;
         }
         footer {
-            background-color: #000; /* কালো রঙ */
+            background-color: #000;
             color: #fff;
-            padding: 10px 0;
+            padding: 20px 0;
             text-align: center;
+            margin-top: 50px;
+        }
+        footer .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        .social-icons {
+            margin: 15px 0;
+        }
+        .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #007bff;
         }
     </style>
 </head>
@@ -64,83 +170,116 @@
     </header>
     
     <main>
-   <!-- Updated Portfolio Section -->
-<section class="portfolio">
-    <div class="container">
-        <h2>Our Portfolio</h2>
-        <div class="portfolio-grid">
-            <!-- Existing Cards -->
-            <div class="portfolio-card">
-                <img src="book.png" alt="Fast Book BD">
-                <div class="card-content">
-                    <h3>Fast Book BD</h3>
-                    <p>Fast Book BD is an innovative e-book platform designed to offer a seamless reading experience.</p>
-                    <a href="https://bengeltigerwd.github.io/Fast-Book-BD/" target="_blank" class="btn">Visit Website</a>
-                </div>
-            </div>
+        <section class="portfolio">
+            <div class="container">
+                <h2>Our Portfolio</h2>
+                <div class="portfolio-grid">
+                    <!-- Islamic Site -->
+                    <div class="portfolio-card">
+                        <img src="https://via.placeholder.com/300x200.png?text=Al-Hidaya" alt="Al-Hidaya Islamic Site">
+                        <div class="card-content">
+                            <h3>Al-Hidaya Islamic Site</h3>
+                            <p>A comprehensive Islamic website featuring Quran, Hadith, Islamic articles, and resources for Muslims.</p>
+                            <a href="https://bengeltigerwd.github.io/al-hidaya.com/" target="_blank" class="btn">Visit Website</a>
+                        </div>
+                    </div>
 
-            <div class="portfolio-card">
-                <img src="Helpinghand.png" alt="Helping Hand Jhenaidah">
-                <div class="card-content">
-                    <h3>Helping Hand Jhenaidah</h3>
-                    <p>Helping Hand Jhenaidah is a donation website aimed at facilitating charitable contributions.</p>
-                    <a href="https://bengeltigerwd.github.io/Helping-Hand-Jhenaidah/" target="_blank" class="btn">Visit Website</a>
-                </div>
-            </div>
+                    <!-- Blood Donation Site -->
+                    <div class="portfolio-card">
+                        <img src="https://via.placeholder.com/300x200.png?text=Blood+Connect" alt="Blood Connect BD">
+                        <div class="card-content">
+                            <h3>Blood Connect BD</h3>
+                            <p>A platform connecting blood donors with recipients across Bangladesh to save lives.</p>
+                            <a href="https://bengeltigerwd.github.io/blood-connect-bd/" target="_blank" class="btn">Visit Website</a>
+                        </div>
+                    </div>
 
-            <div class="portfolio-card">
-                <img src="group-system.png" alt="Team Info">
-                <div class="card-content">
-                    <h3>Team Info</h3>
-                    <p>Team Info is a comprehensive group management system.</p>
-                    <a href="https://bengeltigerwd.github.io/Team-Info/" target="_blank" class="btn">Visit Website</a>
-                </div>
-            </div>
+                    <!-- Game -->
+                    <div class="portfolio-card">
+                        <img src="https://via.placeholder.com/300x200.png?text=Minecraft+Zombee" alt="Minecraft Zombee Fighter">
+                        <div class="card-content">
+                            <h3>Minecraft Zombee Fighter</h3>
+                            <p>An exciting browser-based game where players fight zombie bees in a Minecraft-inspired world.</p>
+                            <a href="https://bengeltigerwd.github.io/Zombee-shooter/" target="_blank" class="btn">Play Game</a>
+                        </div>
+                    </div>
 
-            <div class="portfolio-card">
-                <img src="bengal-exploration.png" alt="Bengal Exploration">
-                <div class="card-content">
-                    <h3>Bengal Exploration</h3>
-                    <p>Bengal Exploration is a powerful search engine designed for fast and accurate search results.</p>
-                    <a href="https://bengeltigerwd.github.io/Bengal-Exploration/" target="_blank" class="btn">Visit Website</a>
-                </div>
-            </div>
+                    <!-- Existing Cards -->
+                    <div class="portfolio-card">
+                        <img src="https://via.placeholder.com/300x200.png?text=Fast+Book" alt="Fast Book BD">
+                        <div class="card-content">
+                            <h3>Fast Book BD</h3>
+                            <p>Fast Book BD is an innovative e-book platform designed to offer a seamless reading experience.</p>
+                            <a href="https://bengeltigerwd.github.io/Fast-Book-BD/" target="_blank" class="btn">Visit Website</a>
+                        </div>
+                    </div>
 
-            <div class="portfolio-card">
-                <img src="logo.png" alt="Advanced Web Store">
-                <div class="card-content">
-                    <h3>Advanced Web Store</h3>
-                    <p>Advanced Web Store offers a wide range of products with a sleek user-friendly interface.</p>
-                    <a href="https://bengeltigerwd.github.io/ADVANCED-WEB-STORE/index.html" target="_blank" class="btn">Visit Website</a>
-                </div>
-            </div>
+                    <div class="portfolio-card">
+                        <img src="https://via.placeholder.com/300x200.png?text=Helping+Hand" alt="Helping Hand Jhenaidah">
+                        <div class="card-content">
+                            <h3>Helping Hand Jhenaidah</h3>
+                            <p>Helping Hand Jhenaidah is a donation website aimed at facilitating charitable contributions.</p>
+                            <a href="https://bengeltigerwd.github.io/Helping-Hand-Jhenaidah/" target="_blank" class="btn">Visit Website</a>
+                        </div>
+                    </div>
 
-            <!-- New Cards -->
-            <div class="portfolio-card">
-                <img src="age.jpg" alt="বয়স কত?">
-                <div class="card-content">
-                    <h3>বয়স কত?</h3>
-                    <p>বয়স কত? একটি সহজ ওয়েবসাইট যা সঠিক বয়স গণনা করতে সাহায্য করে।</p>
-                    <a href="https://bengeltigerwd.github.io/Boyos-Koto/" target="_blank" class="btn">Visit Website</a>
-                </div>
-            </div>
+                    <div class="portfolio-card">
+                        <img src="https://via.placeholder.com/300x200.png?text=Team+Info" alt="Team Info">
+                        <div class="card-content">
+                            <h3>Team Info</h3>
+                            <p>Team Info is a comprehensive group management system.</p>
+                            <a href="https://bengeltigerwd.github.io/Team-Info/" target="_blank" class="btn">Visit Website</a>
+                        </div>
+                    </div>
 
-            <div class="portfolio-card">
-                <img src="base.jpg" alt="Base Expert">
-                <div class="card-content">
-                    <h3>Base Expert</h3>
-                    <p>Base Expert একটি শক্তিশালী প্ল্যাটফর্ম যা বেস রূপান্তর এবং গণনার জন্য ব্যবহার করা যায়।</p>
-                    <a href="https://bengeltigerwd.github.io/BaseXpert/" target="_blank" class="btn">Visit Website</a>
+                    <div class="portfolio-card">
+                        <img src="https://via.placeholder.com/300x200.png?text=Bengal+Exploration" alt="Bengal Exploration">
+                        <div class="card-content">
+                            <h3>Bengal Exploration</h3>
+                            <p>Bengal Exploration is a powerful search engine designed for fast and accurate search results.</p>
+                            <a href="https://bengeltigerwd.github.io/Bengal-Exploration/" target="_blank" class="btn">Visit Website</a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card">
+                        <img src="https://via.placeholder.com/300x200.png?text=Web+Store" alt="Advanced Web Store">
+                        <div class="card-content">
+                            <h3>Advanced Web Store</h3>
+                            <p>Advanced Web Store offers a wide range of products with a sleek user-friendly interface.</p>
+                            <a href="https://bengeltigerwd.github.io/ADVANCED-WEB-STORE/index.html" target="_blank" class="btn">Visit Website</a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card">
+                        <img src="https://via.placeholder.com/300x200.png?text=Age+Calculator" alt="বয়স কত?">
+                        <div class="card-content">
+                            <h3>বয়স কত?</h3>
+                            <p>How old is it? A simple website that helps calculate your exact age.</p>
+                            <a href="https://bengeltigerwd.github.io/Boyos-Koto/" target="_blank" class="btn">Visit Website</a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card">
+                        <img src="https://via.placeholder.com/300x200.png?text=Base+Expert" alt="Base Expert">
+                        <div class="card-content">
+                            <h3>Base Expert</h3>
+                            <p>Base Expert is a powerful platform that can be used for base conversions and calculations.</p>
+                            <a href="https://bengeltigerwd.github.io/BaseXpert/" target="_blank" class="btn">Visit Website</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
         <section class="developer-info">
             <div class="container">
                 <h2>About the Developer</h2>
-                <p>Website developed by <strong>Ajmir Ahmed</strong>, a passionate web developer.</p>
+                <p>Website developed by <strong>Ajmir Ahmed</strong>, a passionate web developer dedicated to creating innovative digital solutions.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/Ajmir.Ahmed.1.1" target="_blank"><i class="fab fa-facebook"></i></a>
+                   
+                 
+                </div>
             </div>
         </section>
     </main>
@@ -148,6 +287,7 @@
     <footer>
         <div class="container">
             <p>&copy; 2024 AL-HIDAYA WEB STUDIO BANGLADESH. All rights reserved.</p>
+           
         </div>
     </footer>
 </body>
