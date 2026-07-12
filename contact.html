@@ -1,236 +1,754 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="styles1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Contact Us - AL-HIDAYA WEB STUDIO BANGLADESH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        body {
-            font-family: 'Times New Roman', Times, serif;
-            background-color: #f4f4f4;
+        /* ===== General Styles ===== */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        header {
-            background-color: #000; /* কালো রঙ */
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-            position: relative;
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #121212;
+            color: #f7f3f2;
+            line-height: 1.6;
+            overflow-x: hidden;
         }
-        header h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-        .nav-buttons {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-            gap: 15px;
-        }
-        .nav-buttons button {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 8px 16px;
-            font-size: 14px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .nav-buttons button:hover {
-            background-color: #0056b3;
-        }
-        footer {
-            background-color: #000; /* কালো রঙ */
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-            font-family: 'Times New Roman', Times, serif; /* ফন্ট স্টাইল */
-        }
-        .contact-container {
-            padding: 20px;
-            text-align: center;
-        }
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-        .contact-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
-        .contact-item img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-        }
-        .contact-item a {
+
+        a {
             text-decoration: none;
-            color: #333;
-            font-size: 16px;
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #ffcc00;
+        }
+
+        /* ===== Loading Page ===== */
+        #loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        #loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        #loading img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        #loading h1 {
+            font-size: 24px;
+            font-family: 'Times New Roman', serif;
+            letter-spacing: 2px;
+        }
+
+        #loading .loader {
+            width: 40px;
+            height: 40px;
+            border: 3px solid #333;
+            border-top: 3px solid #ffcc00;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-top: 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* ===== AI Chatbot Banner ===== */
+        .ai-banner {
+            background: linear-gradient(90deg, #1a1a2e, #2d2d6e);
+            padding: 12px 20px;
+            text-align: center;
+            border-bottom: 2px solid #ffcc00;
+        }
+
+        .ai-banner p {
+            color: #b0c4ff;
+            font-size: 14px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .ai-banner a {
+            color: #ffcc00;
             font-weight: bold;
         }
-        .contact-item p {
-            font-size: 16px;
-            margin: 0;
+
+        .ai-banner a:hover {
+            text-decoration: underline;
         }
-        .contact-form {
-            margin-top: 40px;
+
+        /* ===== Header ===== */
+        header {
+            background-color: black;
+            padding: 20px 0;
             text-align: center;
+            border-bottom: 2px solid #ffcc00;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
-        .contact-form h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        .contact-form form {
+
+        header .container {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
+            padding: 0 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
             gap: 10px;
         }
-        .contact-form label {
-            font-size: 16px;
-            margin-bottom: 5px;
+
+        header .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            max-width: 400px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+
+        header img {
+            width: 60px;
+            height: auto;
         }
-        .contact-form button {
-            background-color: #007bff;
+
+        header h1 {
+            margin: 0;
+            font-size: 22px;
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ffcc00;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-buttons a {
+            padding: 8px 16px;
+            font-size: 13px;
+            font-weight: bold;
             color: #fff;
+            background: transparent;
+            border: 1px solid #ffcc00;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .nav-buttons a:hover {
+            background: #ffcc00;
+            color: black;
+            transform: translateY(-2px);
+        }
+
+        .nav-buttons .ai-link {
+            background: linear-gradient(135deg, #ffcc00, #ff9900);
+            color: black;
             border: none;
-            padding: 10px 20px;
+        }
+
+        .nav-buttons .ai-link:hover {
+            background: linear-gradient(135deg, #ff9900, #ffcc00);
+            color: white;
+        }
+
+        /* ===== Contact Section ===== */
+        .contact-section {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .contact-section h2 {
+            text-align: center;
+            font-size: 32px;
+            color: #ffcc00;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+        }
+
+        .contact-section h2::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #ffcc00;
+            margin: 10px auto;
+        }
+
+        .contact-section > p {
+            text-align: center;
+            color: #aaa;
             font-size: 16px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+            max-width: 600px;
+            margin: 0 auto 30px;
         }
-        .contact-form button:hover {
-            background-color: #0056b3;
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
         }
-        .contact-address {
-            margin-top: 40px;
+
+        /* ===== Contact Info ===== */
+        .contact-info {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+
+        .contact-info:hover {
+            border-color: #ffcc00;
+        }
+
+        .contact-info h3 {
+            color: #ffcc00;
+            font-size: 20px;
+            margin-bottom: 20px;
             text-align: center;
         }
-        .contact-address h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 0;
+            border-bottom: 1px solid #222;
+            transition: all 0.3s ease;
         }
-        .contact-address p {
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-item:hover {
+            padding-left: 10px;
+        }
+
+        .contact-item img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .contact-item .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #2a2a2a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #ffcc00;
+            flex-shrink: 0;
+        }
+
+        .contact-item .info {
+            flex: 1;
+        }
+
+        .contact-item .info .label {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-item .info .value {
+            font-size: 15px;
+            color: #f7f3f2;
+        }
+
+        .contact-item .info .value a {
+            color: #f7f3f2;
+        }
+
+        .contact-item .info .value a:hover {
+            color: #ffcc00;
+        }
+
+        /* ===== Contact Form ===== */
+        .contact-form {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form:hover {
+            border-color: #ffcc00;
+        }
+
+        .contact-form h3 {
+            color: #ffcc00;
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .contact-form label {
+            display: block;
+            font-size: 14px;
+            color: #aaa;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            background: #121212;
+            border: 1px solid #333;
+            border-radius: 8px;
+            color: #f7f3f2;
+            font-size: 14px;
+            font-family: 'Courier New', monospace;
+            transition: all 0.3s ease;
+            margin-bottom: 15px;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #ffcc00;
+            box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.1);
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #ffcc00, #ff9900);
+            color: black;
+            border: none;
+            border-radius: 8px;
             font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Courier New', monospace;
+        }
+
+        .contact-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 204, 0, 0.3);
+            color: white;
+        }
+
+        /* ===== Address Section ===== */
+        .address-section {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .address-card {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #333;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .address-card:hover {
+            border-color: #ffcc00;
+        }
+
+        .address-card h3 {
+            color: #ffcc00;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .address-card p {
+            color: #aaa;
+            font-size: 15px;
             margin: 5px 0;
         }
 
-        /* Responsive Styles */
+        .address-card a {
+            color: #ffcc00;
+        }
+
+        .address-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            background-color: black;
+            padding: 20px 0;
+            text-align: center;
+            border-top: 1px solid #222;
+            margin-top: 30px;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        footer .footer-links {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        footer .footer-links a {
+            color: #666;
+            font-size: 13px;
+            transition: color 0.3s ease;
+        }
+
+        footer .footer-links a:hover {
+            color: #ffcc00;
+        }
+
+        /* ===== Floating Chatbot Button ===== */
+        .chatbot-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .chatbot-float .btn-chat {
+            background: linear-gradient(135deg, #ffcc00, #ff9900);
+            color: black;
+            padding: 14px 22px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(255, 204, 0, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            text-decoration: none;
+        }
+
+        .chatbot-float .btn-chat:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 35px rgba(255, 204, 0, 0.6);
+            color: white;
+        }
+
+        .chatbot-float .btn-chat i {
+            font-size: 20px;
+        }
+
+        .chatbot-float .chat-label {
+            font-size: 12px;
+            color: #aaa;
+            background: rgba(0,0,0,0.8);
+            padding: 4px 12px;
+            border-radius: 20px;
+            border: 1px solid #ffcc00;
+        }
+
+        /* ===== Responsive ===== */
         @media (max-width: 768px) {
-            .nav-buttons {
-                flex-direction: row;
-                gap: 10px;
-                justify-content: center;
+            header .container {
+                flex-direction: column;
+                text-align: center;
             }
-            .nav-buttons button {
+
+            header h1 {
+                font-size: 18px;
+            }
+
+            header img {
+                width: 50px;
+            }
+
+            .nav-buttons a {
                 font-size: 12px;
                 padding: 6px 12px;
             }
-            .contact-item img {
-                width: 40px;
-                height: 40px;
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
             }
-            .contact-item a, .contact-item p {
+
+            .contact-section h2 {
+                font-size: 26px;
+            }
+
+            .contact-info,
+            .contact-form {
+                padding: 20px;
+            }
+
+            .chatbot-float {
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .chatbot-float .btn-chat {
+                padding: 12px 18px;
                 font-size: 14px;
             }
-            .contact-form input, .contact-form textarea {
-                max-width: 100%;
+
+            .chatbot-float .btn-chat span {
+                display: none;
+            }
+
+            .chatbot-float .btn-chat i {
+                font-size: 22px;
+            }
+
+            .ai-banner p {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 16px;
+            }
+
+            .nav-buttons a {
+                font-size: 10px;
+                padding: 5px 10px;
+            }
+
+            .contact-section h2 {
+                font-size: 22px;
+            }
+
+            .contact-item {
+                padding: 10px 0;
+            }
+
+            .contact-item img,
+            .contact-item .icon {
+                width: 32px;
+                height: 32px;
+                font-size: 14px;
+            }
+
+            .contact-item .info .value {
+                font-size: 13px;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                padding: 10px 12px;
+                font-size: 13px;
+            }
+
+            .chatbot-float .btn-chat {
+                padding: 10px 14px;
+                font-size: 12px;
+            }
+
+            .chatbot-float .btn-chat i {
+                font-size: 18px;
             }
         }
     </style>
 </head>
 <body>
-   
-    <!-- Header -->
-    <header>
-        <h1>AL-HIDAYA WEB STUDIO BANGLADESH</h1>
-        <!-- Navigation Buttons -->
-        <div class="nav-buttons">
-            <button onclick="window.location.href='index.html'">Home</button>
-            <button onclick="window.history.back()">Back</button>
-        </div>
-    </header>
-    
-    <!-- Contact Information -->
-    <div class="contact-container">
-        <p>We'd love to hear from you! Whether you have questions, feedback, or just want to say hello, feel free to reach out to us through any of the following methods:</p>
-        
-        <div class="contact-info">
-            <!-- Telegram -->
-            <div class="contact-item">
-                <img src="telegram.jpeg" alt="Telegram">
-                <a href="https://t.me/Ajmir100" target="_blank">Telegram</a>
-            </div>
-            <!-- YouTube -->
-            <div class="contact-item">
-                <img src="youtoub.png" alt="YouTube">
-                <a href="https://www.youtube.com/@BengalTigerWebTech" target="_blank">YouTube</a>
-            </div>
-            <!-- Facebook -->
-            <div class="contact-item">
-                <img src="facebook.png" alt="Facebook">
-                <a href="https://www.facebook.com/profile.php?id=100083235735194&mibextid=JRoKGi" target="_blank">Facebook</a>
-            </div>
-            <!-- Mobile -->
-            <div class="contact-item">
-                <p>Mobile: <a href="tel:01938954599">01938954599</a></p>
-            </div>
-        </div>
-
-        <!-- Contact Form -->
-        <div class="contact-form">
-            <h2>Send Us a Message</h2>
-            <form action="mailto:ajmirahemed75@gmail.com" method="post" enctype="text/plain">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-        
-        <!-- Company Address -->
-        <div class="contact-address">
-            <h2>Our Address</h2>
-            <p>AL-HIDAYA WEB STUDIO BANGLADESH</p>
-            <p>Bangladesh</p>
-            <p>Email: <a href="mailto:ajmirahemed75@gmail.com">ajmirahemed75@gmail.com</a></p>
-        </div>
+    <!-- ===== Loading Page ===== -->
+    <div id="loading">
+        <img src="image_2024-12-29_204957428.png" alt="Logo">
+        <h1>Loading Please Wait...</h1>
+        <div class="loader"></div>
     </div>
 
-    <script>
-        function goToPage(page) {
-            window.location.href = page;
-        }
+    <!-- ===== AI Chatbot Banner ===== -->
+    <div class="ai-banner">
+        <p>
+            🤖 <strong>আমাদের AI চ্যাটবট ব্যবহার করুন!</strong> 
+            <a href="https://bengalai-production.up.railway.app/" target="_blank">এখানে ক্লিক করুন</a> 
+            এবং সঙ্গে সঙ্গে চ্যাট শুরু করুন!
+        </p>
+    </div>
 
-        function goBack() {
-            window.history.back();
-        }
-    </script>
-    <!-- Footer -->
+    <!-- ===== Header ===== -->
+    <header>
+        <div class="container">
+            <div class="logo-area">
+                <img src="image_2024-12-29_204957428.png" alt="Logo">
+                <h1>AL-HIDAYA WEB STUDIO</h1>
+            </div>
+            <nav class="nav-buttons">
+                <a href="index.html">Home</a>
+                <a href="javascript:history.back()">Back</a>
+                <a href="https://bengalai-production.up.railway.app/" target="_blank" class="ai-link">🤖 AI Chat</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== Contact Section ===== -->
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! Whether you have questions, feedback, or just want to say hello, feel free to reach out to us through any of the following methods:</p>
+
+        <div class="contact-grid">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h3><i class="fas fa-address-card"></i> Get in Touch</h3>
+
+                <div class="contact-item">
+                    <div class="icon"><i class="fab fa-telegram-plane"></i></div>
+                    <div class="info">
+                        <div class="label">Telegram</div>
+                        <div class="value"><a href="https://t.me/Ajmir100" target="_blank">@Ajmir100</a></div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="icon"><i class="fab fa-youtube"></i></div>
+                    <div class="info">
+                        <div class="label">YouTube</div>
+                        <div class="value"><a href="https://www.youtube.com/@BengalTigerWebTech" target="_blank">BengalTigerWebTech</a></div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="icon"><i class="fab fa-facebook"></i></div>
+                    <div class="info">
+                        <div class="label">Facebook</div>
+                        <div class="value"><a href="https://www.facebook.com/profile.php?id=100083235735194" target="_blank">AL-HIDAYA WEB STUDIO</a></div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="icon"><i class="fas fa-phone"></i></div>
+                    <div class="info">
+                        <div class="label">Mobile</div>
+                        <div class="value"><a href="tel:01938954599">01938954599</a></div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="icon"><i class="fas fa-envelope"></i></div>
+                    <div class="info">
+                        <div class="label">Email</div>
+                        <div class="value"><a href="mailto:ajmirahemed75@gmail.com">ajmirahemed75@gmail.com</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h3><i class="fas fa-paper-plane"></i> Send a Message</h3>
+                <form action="mailto:ajmirahemed75@gmail.com" method="post" enctype="text/plain">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="আপনার নাম" required>
+
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="আপনার ইমেইল" required>
+
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" placeholder="আপনার বার্তা..." required></textarea>
+
+                    <button type="submit"><i class="fas fa-send"></i> Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Address Section ===== -->
+    <section class="address-section">
+        <div class="address-card">
+            <h3><i class="fas fa-map-marker-alt"></i> Our Address</h3>
+            <p><strong>AL-HIDAYA WEB STUDIO BANGLADESH</strong></p>
+            <p>Bangladesh</p>
+            <p>Email: <a href="mailto:ajmirahemed75@gmail.com">ajmirahemed75@gmail.com</a></p>
+            <p>Phone: <a href="tel:01938954599">01938954599</a></p>
+        </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
     <footer>
-        <p>&copy; 2024 AL-HIDAYA WEB STUDIO BANGLADESH. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 AL-HIDAYA WEB STUDIO BANGLADESH. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://bengalai-production.up.railway.app/" target="_blank">🤖 AI Chatbot</a>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+            </div>
+        </div>
     </footer>
+
+    <!-- ===== Floating Chatbot Button ===== -->
+    <div class="chatbot-float">
+        <a href="https://bengalai-production.up.railway.app/" target="_blank" class="btn-chat">
+            <i class="fas fa-robot"></i>
+            <span>AI চ্যাট করুন</span>
+        </a>
+        <span class="chat-label">💬 ২৪/৭ অনলাইন</span>
+    </div>
+
+    <!-- ===== Loading Script ===== -->
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('loading').classList.add('hidden');
+            }, 1500);
+        };
+    </script>
 </body>
 </html>
